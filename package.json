@@ -6,7 +6,7 @@
     "start": "concurrently npm:watch:server npm:start:client npm:start:server",
     "start:client": "parcel serve --no-autoinstall --no-cache --dist-dir dist/client client/index.html",
     "start:server": "cp server/schema.graphql dist/server && nodemon dist/server/index.js",
-    "watch:server": "parcel watch --no-autoinstall --no-cache --dist-dir dist/server server/index.ts --target node"
+    "watch:server": "parcel watch --no-autoinstall --no-cache --dist-dir dist/server server/index.ts --no-hmr --target node"
   },
   "repository": {
     "type": "git",
